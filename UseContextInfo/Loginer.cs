@@ -17,16 +17,13 @@ namespace UseContextInfo
             if (librarian != null)
             {
                 Console.Write("Enter your password: ");
-                while (true)
+                string? password = Console.ReadLine();
+                if (password == librarian.Password)
+                    return true;
+                else
                 {
-                    string? password = Console.ReadLine();
-                    if (password == librarian.Password)
-                        return true;
-                    else
-                    {
-                        Console.WriteLine("Incorrect password");
-                        return false;
-                    }
+                    Console.WriteLine("Incorrect password");
+                    return false;
                 }
             }
             else
@@ -44,16 +41,13 @@ namespace UseContextInfo
             if (reader != null)
             {
                 Console.Write("Enter your password: ");
-                while (true)
+                string? password = Console.ReadLine();
+                if (password == reader.Password)
+                    return true;
+                else
                 {
-                    string? password = Console.ReadLine();
-                    if (password == reader.Password)
-                        return true;
-                    else
-                    {
-                        Console.WriteLine("Incorrect password");
-                        return false;
-                    }
+                    Console.WriteLine("Incorrect password");
+                    return false;
                 }
             }
             else
